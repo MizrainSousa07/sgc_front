@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagelogin.css">
+    <title>Document</title>
+    <style>
+        .stylemsg{
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1rem;
+            padding-right: 50px;
+            padding-left: 50px;
+            border-radius: 3px;
+        }
+        .success {
+            background-color: #4CAF50;
+        }
+        .error {
+            background-color: #F44336;
+        }
+        .info {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-image">
+            <img src="img/key-6-512.png" alt="Chave">
+        </div>
+        <div class="form">
+            <div class="messages">
+                <!-- As mensagens serão inseridas aqui pela função showMessage -->
+            </div>
+            <form action="login.html" method="post">
+                <div class="input-group">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="input-box">
+                        <label for="nomeUsuario">Nome de Usuário</label>
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" >
+                    </div>
+                    <div class="input-box">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" >
+                    </div>
+                    <div>
+                        <a style="text-decoration: none;" href="listaretiradas.html" class="continue-button">Entrar</a>
+                    </div>
+                    <!-- <div>
+                        <input class="continue-button" type="submit" value="Entrar">
+                    </div> -->
+                    <!-- <div class="e-cad-d">
+                        <label class="lblogin" for="">Não tem conta? <a class="e-cad" href="/accounts/cadastro">Cadastre-se</a></label>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
