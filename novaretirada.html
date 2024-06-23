@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="novaretirada.css">
+    <title>Adicionar Retirada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .user-icon {
+            padding: 10px;
+            background-color: #555;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section-p {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .messages p {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1rem;
+            padding-right: 50px;
+            padding-left: 50px;
+            border-radius: 3px;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            background-color: #F44336;
+        }
+
+        .info {
+            background-color: #FFC107;
+        }
+
+        .circle1, .circle2, .circle3, .circle4, .circle5 {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .text {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #444;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="listaretiradas.html">Retiradas</a></li>
+            <li><a href="dependencias.html">Blocos e Salas</a></li>
+            <li><a href="novachave.html">Chaves</a></li>
+        </ul>
+        <div class="user-icon"><a href="logout.html">Sair</a></div>
+    </nav>
+
+    <main>
+        <section class="section-p">
+            <div class="messages">
+                <!-- As mensagens serão inseridas aqui -->
+            </div>
+            <h2>Nova Retirada</h2>
+            <form action="novaretirada.html" method="post">
+                <input type="text" name="responsavel" placeholder="Nome do Responsável">
+                <br><br>
+                <label for="slcbloco" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: small;">Selecione o Destino: </label>
+                <select name="slcbloco">
+                    <!-- Exemplo de opções -->
+                    <option value="Sala 101">Sala E07</option>
+                    <option value="Sala 102">Auditório</option>
+                    <option value="Sala 103">Lab. Informática I</option>
+                </select>
+                <br><br>
+                <button type="submit">
+                    <span class="circle1"></span>
+                    <span class="circle2"></span>
+                    <span class="circle3"></span>
+                    <span class="circle4"></span>
+                    <span class="circle5"></span>
+                    <span class="text">Adicionar</span>
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
