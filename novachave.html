@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="novaretirada.css">
-    <title>Adicionar Retirada</title>
+    <link rel="stylesheet" href="novachave.css">
+    <title>Adicionar Chave</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,7 +54,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .messages p {
+        .stylemsg {
             text-align: center;
             color: #fff;
             margin-bottom: 1rem;
@@ -62,45 +62,34 @@
             padding-left: 50px;
             border-radius: 3px;
         }
-
         .success {
             background-color: #4CAF50;
         }
-
         .error {
             background-color: #F44336;
         }
-
         .info {
             background-color: #FFC107;
         }
 
-        .circle1, .circle2, .circle3, .circle4, .circle5 {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #4CAF50;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
-
-        .text {
-            color: #fff;
-            font-weight: bold;
-        }
-
         button {
-            background-color: #444;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background-color: #444;
+            border-radius: 0.9em;
+            padding: 0.8em 1.2em;
+            transition: all ease-in-out 0.2s;
+            font-size: 14px;
+            margin-bottom: 1rem;
             color: #fff;
             cursor: pointer;
             display: flex;
             align-items: center;
         }
 
-        
+        button span {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -115,20 +104,23 @@
 
     <main>
         <section class="section-p">
-            <div class="messages">
-                <!-- As mensagens serão inseridas aqui -->
-            </div>
-            <h2>Nova Retirada</h2>
-            <form action="novaretirada.html" method="post">
-                <input type="text" name="responsavel" placeholder="Nome do Responsável">
-                <br><br>
-                <label for="slcbloco" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: small;">Selecione o Destino: </label>
-                <select name="slcbloco">
-                    <!-- Exemplo de opções -->
-                    <option value="Sala 101">Sala E07</option>
-                    <option value="Sala 102">Auditório</option>
-                    <option value="Sala 103">Lab. Informática I</option>
+            <h2>Nova Chave</h2>
+            <form action="novachave.html" method="post">
+                <label for="slcsala" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: small;">Selecione a sala a qual a chave pertence: </label>
+                <select name="slcsala">
+                    <!-- Exemplo de opções de salas -->
+                    <option value="1">Sala E09</option>
+                    <option value="2">Sala J05</option>
+                    <option value="2">Biblioteca</option>
+                    <option value="2">Lab. Informática II</option>
                 </select>
+                <br><br>
+                <label for="slcsetor" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: small;">Selecione o setor a qual a chave pertence: </label>
+                <br><br>
+                <label for="guarita">Guarita:</label>
+                <input type="radio" id="guarita" name="local" value="1">
+                <label for="administrativo">Administrativo:</label>
+                <input type="radio" id="administrativo" name="local" value="2">
                 <br><br>
                 <button type="submit">
                     <span class="circle1"></span>

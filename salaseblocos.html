@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="salaseblocos.css">
+    <title>Salas e Blocos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .user-icon {
+            padding: 10px;
+            background-color: #555;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section-p {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            border: 2px solid #4CAF50;
+            background-color: #4CAF50;
+            border-radius: 0.9em;
+            padding: 0.8em 1.2em;
+            transition: all ease-in-out 0.2s;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        button span {
+            display: flex;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #409743;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .card-details {
+            display: none; /* Oculto por padrão */
+        }
+
+        .card-details p {
+            margin: 5px 0;
+        }
+
+        .cd-icon {
+            fill: black;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="listaretiradas.html">Retiradas</a></li>
+            <li><a href="dependencias.html">Blocos e Salas</a></li>
+            <li><a href="novachave.html">Chaves</a></li>
+        </ul>
+        <div class="user-icon"><a href="logout.html">Sair</a></div>
+    </nav>
+
+    <main>
+        <section class="section-p">
+            <div class="button-container">
+                <a style="text-decoration: none;" href="novobloco.html">
+                    <button>
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                          </svg>
+                          Novo Bloco
+                        </span>
+                    </button>
+                </a>
+                <a style="text-decoration: none;" href="novasala.html">
+                    <button>
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                          </svg>
+                          Nova Sala
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <!-- Exemplo de dados dos blocos e salas -->
+            <div class="card">
+                <div class="card-header" onclick="toggleDetails(this)">
+                    <h2>Bloco A<svg class="cd-icon" xmlns="http://www.w3.org/2000/svg" height="0.9em" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></h2>
+                </div>
+                <div class="card-details">
+                    <p>Auditório</p>
+                    <p>Rádio</p>   
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" onclick="toggleDetails(this)">
+                    <h2>Bloco E<svg class="cd-icon" xmlns="http://www.w3.org/2000/svg" height="0.9em" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></h2>
+                </div>
+                <div class="card-details">
+                    <p>Sala E07</p>
+                    <p>Sala E08</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" onclick="toggleDetails(this)">
+                    <h2>Bloco G<svg class="cd-icon" xmlns="http://www.w3.org/2000/svg" height="0.9em" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></h2>
+                </div>
+                <div class="card-details">
+                    <p>Grêmio</p>
+                    <p>Lab. Informática I</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleDetails(element) {
+            const details = element.nextElementSibling;
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
